@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/new_guest_input"
+        android:layout_width="297dp"
+        android:layout_height="43dp"
+        android:layout_margin="@dimen/border_padding"
+        android:ems="10"
+        android:hint="@string/instructions_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_guest_button"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/add_guest_button"
+        android:layout_width="235dp"
+        android:layout_height="52dp"
+        android:layout_margin="@dimen/border_padding"
+        android:text="@string/add_button_text"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/last_guest_added"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_guest_input" />
+
+    <TextView
+        android:id="@+id/list_of_guests"
+        android:layout_width="289dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/border_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_guest_added"
+        android:layout_width="289dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/border_padding"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/clear_guests_button"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_guest_button" />
+
+    <Button
+        android:id="@+id/clear_guests_button"
+        android:layout_width="184dp"
+        android:layout_height="51dp"
+        android:layout_margin="@dimen/border_padding"
+        android:backgroundTint="#F29A0808"
+        android:text="@string/clear_button_text"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_guest_added" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="5dp"
+        android:layout_height="401dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
